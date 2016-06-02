@@ -1,9 +1,9 @@
-
-
 import path from 'path';
 import webpack from 'webpack';
 import extend from 'extend';
 import AssetsPlugin from 'assets-webpack-plugin';
+import SvgStore from 'webpack-svgstore-plugin';
+
 
 const DEBUG = !process.argv.includes('--release');
 const VERBOSE = process.argv.includes('--verbose');
@@ -21,6 +21,18 @@ const GLOBALS = {
   'process.env.NODE_ENV': DEBUG ? '"development"' : '"production"',
   __DEV__: DEBUG,
 };
+
+
+
+// Adding Global Configuration to minify the svg by using SVGO
+const svgoConfig = JSON.stringify({
+  plugins: [
+    {removeTitle: true},
+    {convertColors: {shorthex: false}},
+    {convertPathData: false}
+  ]
+});
+
 
 //
 // Common configuration chunk to be used for both
@@ -206,6 +218,17 @@ const clientConfig = extend(true, {}, config, {
   target: 'web',
 
   plugins: [
+    
+    new SvgStore(path.join(__dirname,'../src/components/**/*.svg'), "", {
+      name: 'iconSprite.svg',
+      prefix: 'icon-',
+      svgoOptions: {
+        // options for svgo 
+        plugins: [
+          { removeTitle: true }
+        ]
+      }
+    }),
 
     // Define free variables
     // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
