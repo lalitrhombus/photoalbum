@@ -218,17 +218,6 @@ const clientConfig = extend(true, {}, config, {
   target: 'web',
 
   plugins: [
-    
-    new SvgStore(path.join(__dirname,'../src/components/**/*.svg'), "", {
-      name: 'iconSprite.svg',
-      prefix: 'icon-',
-      svgoOptions: {
-        // options for svgo 
-        plugins: [
-          { removeTitle: true }
-        ]
-      }
-    }),
 
     // Define free variables
     // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
@@ -265,7 +254,7 @@ const clientConfig = extend(true, {}, config, {
       // A plugin for a more aggressive chunk merging strategy
       // https://webpack.github.io/docs/list-of-plugins.html#aggressivemergingplugin
       new webpack.optimize.AggressiveMergingPlugin(),
-    ],
+    ]
   ],
 
   // Choose a developer tool to enhance debugging

@@ -38,7 +38,6 @@
     "react-dom": "15.1.0",
     "svgo": "^0.6.1",
     "svgo-loader": "^1.1.0",
-    "webpack-svgstore-plugin": "^2.1.4",
     "sequelize": "3.23.2",
     "source-map-support": "0.4.0",
     "sqlite3": "3.1.4",
@@ -97,24 +96,25 @@
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "postcss-media-minmax": "^2.1.2",
-    "postcss-scss": "^0.1.8",
     "postcss-nesting": "^2.3.1",
     "postcss-pseudoelements": "^3.0.0",
+    "postcss-scss": "^0.1.8",
     "postcss-selector-matches": "^2.0.1",
     "postcss-selector-not": "^2.0.0",
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.1.0",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
-    "redux-logger": "^2.6.1",
     "redbox-react": "^1.2.6",
+    "redux-logger": "^2.6.1",
     "sinon": "^2.0.0-pre",
     "stylelint": "^6.5.1",
     "stylelint-config-standard": "^8.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-hot-middleware": "^2.10.0",
-    "webpack-middleware": "^1.5.1"
+    "webpack-middleware": "^1.5.1",
+    "webpack-svgstore-plugin": "2.2.2"
   },
   "babel": {
     "presets": [
@@ -152,7 +152,15 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "string-quotes": "single",
-      "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global", "local"] }]
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "global",
+            "local"
+          ]
+        }
+      ]
     }
   },
   "scripts": {
