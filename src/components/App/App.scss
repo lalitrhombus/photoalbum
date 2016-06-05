@@ -1,13 +1,13 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 @import '../variables.scss';
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 /*
  * Base styles
  * ========================================================================== */
 
 html {
   color: #222;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1em; /* ~16px; */
   font-family: $font-family-base;
   line-height: 1.375; /* ~22px */
@@ -16,7 +16,6 @@ html {
 a {
   color: #0074c2;
 }
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -97,6 +96,14 @@ body{
 }
 *{
   box-sizing: border-box;
+}
+.wrapper{
+  width: 100%;
+}
+.container{
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 50px;
 }
 
 /*

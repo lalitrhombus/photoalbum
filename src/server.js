@@ -13,7 +13,7 @@ import routes from './routes';
 import assets from './assets'; // eslint-disable-line import/no-unresolved
 import { port, auth, analytics } from './config';
 import configureStore from './store/configureStore';
-import { setRuntimeVariable } from './actions/runtime';
+import { getInitialUserList } from './actions/getUser';
 
 const app = express();
 
@@ -61,10 +61,7 @@ app.get('*', async (req, res, next) => {
       cookie: req.headers.cookie,
     });
 
-    store.dispatch(setRuntimeVariable({
-      name: 'initialNow',
-      value: Date.now(),
-    }));
+    store.dispatch(getInitialUserList());
 
     await match(routes, {
       path: req.path,

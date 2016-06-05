@@ -1,1 +1,1 @@
-export const SET_RUNTIME_VARIABLE = 'SET_RUNTIME_VARIABLE';
+export const SET_USER = 'SET_USER';

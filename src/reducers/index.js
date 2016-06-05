@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
-import runtime from './runtime';
-
+import reducerUser from './reducerUser';
 export default combineReducers({
-  runtime,
+  users:reducerUser
 });

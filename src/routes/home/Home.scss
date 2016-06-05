@@ -1,13 +1,61 @@
-
-
 @import '../../components/variables.scss';
-
-.root {
-  padding-left: 20px;
-  padding-right: 20px;
+h1 {
+    color: $text-grey-color;
+    border-bottom: 1px solid $text-grey-color;
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+    padding: 5px 10px;
+    .shiftRight {
+        float: right;
+        line-height: 30px;
+        color: $dark-grey-color;
+        font-size: 12px;
+    }
+    .colored {
+        color: $primary-color;
+    }
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 0 40px;
+.users {
+    background: #fff;
+    margin: 20px;
+    border-top-left-radius: 75px;
+    border-bottom-left-radius: 75px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    font-size: 0;
+    cursor: pointer;
+    max-width: 520px;
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        display: inline-block;
+        width: 150px;
+        margin-left: -2px;
+        vertical-align: top;
+    }
+    p {
+        font-size: 18px;
+        min-width: calc(100% - 150px);
+        text-align: center;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        line-height: 146px;
+        color: $dark-grey-color;
+        text-transform: capitalize;
+    }
+    &:hover {
+        border: 2px solid $primary-color;
+        p {
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
 }
