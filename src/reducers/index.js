@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux';
-import weatherReducer from './reducer_weather';
+import usersReducer from './reducer_users';
+import albumsReducer from './reducer_albums';
+import photosReducer from './reducer_photos';
+
 
 const rootReducer = combineReducers({
-  weather:weatherReducer
+  users:usersReducer,
+  albums:albumsReducer,
+  photos:photosReducer
 });
 
 export default rootReducer;
