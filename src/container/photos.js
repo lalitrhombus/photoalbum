@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {featchAlbums,featchPhotos} from '../actions/index';
+import LazyLoad from 'react-lazy-load';
 
 class Photos extends React.Component {
   constructor(props) {
@@ -11,8 +12,11 @@ class Photos extends React.Component {
   showPhoto(photo){
     return(
       <div className="photo" key={photo.id}>
+        <div className="filler" />
+        <LazyLoad offsetVertical={300}>
           <img src={photo.thumbnailUrl} alt="" className=""/>
-          <p>{photo.title}</p>
+        </LazyLoad>
+        <p>{photo.title}</p>
       </div>
     )
   }

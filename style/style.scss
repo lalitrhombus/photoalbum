@@ -277,6 +277,7 @@ h1 {
     font-size: 0;
     cursor: pointer;
     max-width: 520px;
+    position: relative;
     img {
         width: 150px;
         height: 150px;
@@ -299,6 +300,38 @@ h1 {
         color: $dark-grey-color;
         text-transform: capitalize;
     }
+    .userid{
+      position: absolute;
+      left: 122px;
+      bottom: 0%;
+      width: 50px;
+      line-height: 26px;
+      display: inline-block;
+      margin: 0;padding: 0;
+      font-size: 0;
+      min-width: initial;
+      span{
+        background: $body-background;
+        font-size: 12px;
+        width: 20px;
+        height: 26px;
+        display: inline-block;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        color: $dark-grey-color;
+      }
+      .filled{
+        background: #d52e2f;
+        color: #fff;
+        width: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        border-top-left-radius: 13px;
+        border-bottom-left-radius: 13px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+    }
     &:hover {
         border: 2px solid $primary-color;
         p {
@@ -308,3 +341,5 @@ h1 {
         }
     }
 }
+
+
