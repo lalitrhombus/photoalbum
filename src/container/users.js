@@ -15,12 +15,15 @@ class Users extends React.Component {
       <div className="users" key={user.id}>
           <img src={`/public/userPhoto/${user.pic}`} alt="" className=""/>
           <p>{user.name}</p>
+          <p className="userid"><span className="filled">ID</span>{user.id}</p>
+          <p className="albumsCount"><span className="filled">albums</span>{user.albumsCount}</p>
+          <p className="photosCount"><span className="filled">albums</span>{user.photosCount}</p>
       </div>
     )
   }
 
   render() {
-    console.log("rendered");
+    console.log("album rendered");
     return (
       <div className="wrapper">
         <div className="container">
@@ -37,6 +40,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps({users,photos,albums}){
+  console.log("users: ", users)
   return {users,photos,albums};
 }
 
