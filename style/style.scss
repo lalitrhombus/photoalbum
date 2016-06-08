@@ -276,6 +276,7 @@ h1 {
     overflow: hidden;
     font-size: 0;
     cursor: pointer;
+    display: block;
     max-width: 520px;
     position: relative;
     img {
@@ -343,3 +344,69 @@ h1 {
 }
 
 
+.album{
+  background: #fff;
+  margin:20px;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  font-size: 0;
+  display: block;
+  cursor: pointer;
+  .id{
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    background: $body-background;
+    color: $dark-grey-color;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 80px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .title{
+    padding: 30px 20px 0 20px;
+    display: inline-block;
+    width: calc(100% - 80px);
+    color: $text-grey-color;
+    margin: 0;
+    font-size: 16px;
+    vertical-align: top;
+
+  }
+  &:hover{
+      border: 2px solid $primary-color;
+  }
+}
+
+.photo{
+  width: calc(50% - 60px);
+  margin:30px;
+  vertical-align: top;
+  display: inline-block;
+  padding: 20px 0;
+  &:hover{
+    background: #fff;
+  }
+  .LazyLoad{
+    background: $text-grey-color;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    img{
+      width: 100%;
+    }
+  }
+  p{
+    text-align: center;
+    font-size: 12px;
+    color: $text-grey-color;
+    margin: 0;
+    padding: 0;
+  }
+}

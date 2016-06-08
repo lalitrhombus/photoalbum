@@ -2,26 +2,31 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {featchAlbums,featchPhotos} from '../actions/index';
+import { Link } from 'react-router';
+
 
 class Users extends React.Component {
   constructor(props) {
     super(props);
-    this.props.featchAlbums();
-    this.props.featchPhotos();
+    if(this.props.albums.length==0){
+      this.props.featchAlbums();
+    }
+    if(this.props.photos.length==0){
+      this.props.featchPhotos();
+    }
   }
 
   showUser(user){
     return(
-      <div className="users" key={user.id}>
+      <Link to={`/albums/${user.id}`} className="users" key={user.id}>
           <img src={`/public/userPhoto/${user.pic}`} alt="" className=""/>
           <p>{user.name}</p>
           <p className="userid"><span className="filled">{user.id}</span>id</p>
-      </div>
+      </Link>
     )
   }
 
   render() {
-    console.log("album rendered");
     return (
       <div className="wrapper">
         <div className="container">
@@ -38,7 +43,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps({users,photos,albums}){
-  console.log("users: ", users)
   return {users,photos,albums};
 }
 
