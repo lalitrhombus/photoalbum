@@ -46,7 +46,7 @@ class Photos extends React.Component {
     return (
       <div className="wrapper">
         <div className="container">
-          <h1>Photos  <span className="shiftRight"><span className="colored">{this.props.photos.length}</span> Sets</span></h1>
+          <h1>Photos  <span className="shiftRight"><span className="colored">{photos.length}</span> Sets</span></h1>
           {
               photos.map((photo)=>{ return this.showPhoto(photo)})
           }
