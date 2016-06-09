@@ -19,7 +19,7 @@ class Users extends React.Component {
   showUser(user){
     return(
       <Link to={`/albums/${user.id}`} className="users" key={user.id}>
-          <img src={`/public/userPhoto/${user.pic}`} alt="" className=""/>
+          <img src={`public/userPhoto/${user.pic}`} alt="" className=""/>
           <p>{user.name}</p>
           <p className="userid"><span className="filled">{user.id}</span>id</p>
       </Link>
