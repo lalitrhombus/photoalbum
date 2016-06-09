@@ -19,19 +19,19 @@ export default class header extends React.Component {
       <div className="nav">
         <Link to="/" className="" onlyActiveOnIndex activeClassName="active">
           <svg>
-            <use xlinkHref={`/public/iconSprite.svg#icon-user`}></use>
+            <use xlinkHref={`public/iconSprite.svg#icon-user`}></use>
           </svg>
           <p>Users</p>
         </Link>
         <Link className="" activeClassName="active" to="/albums">
           <svg>
-            <use xlinkHref={`/public/iconSprite.svg#icon-album`}></use>
+            <use xlinkHref={`public/iconSprite.svg#icon-album`}></use>
           </svg>
           <p>Albums</p>
         </Link>
         <Link className="" activeClassName="active" to="/photos">
           <svg>
-            <use xlinkHref={`/public/iconSprite.svg#icon-picture`}></use>
+            <use xlinkHref={`public/iconSprite.svg#icon-picture`}></use>
           </svg>
           <p>Pictures</p>
         </Link>
